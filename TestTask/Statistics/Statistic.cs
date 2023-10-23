@@ -75,6 +75,8 @@ namespace TestTask.Statistics
         /// <returns>true - буква, false - любой друой символ отличающийся от буквы</returns>
         protected bool CheckStringLetter(string str)
         {
+            if (string.IsNullOrEmpty(str)) return false;
+
             foreach (char c in str)
                 if (!char.IsLetter(c))
                     return false;
